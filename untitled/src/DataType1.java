@@ -48,11 +48,24 @@ public class DataType1 {
         System.out.println(word2);
 
         // 문자열에서 많이 사용하는 메서드
-        // .charAt 특정 위치 리턴, 특정 값으로 split, 특정 값을 변경 replace, 특정 값이 포함되어 있는지
+        // .charAt 특정 위치 리턴, . split("정규식")  특정 값으로 문자열을 끊어씀
+        // 특정 값을 변경 replace, 특정 값이 포함되어 있는지
         // 인덱스로 특정 문자를 사용할 수 있는지? 음수 인덱싱이 가능한지?
         System.out.println(word2.charAt(2));
         System.out.println(word2.split(" ")); // [Ljava.lang.String;@b4c966a
-        System.out.println(Arrays.toString(word2.split(" "))); // Ctrl + Space로 필요한 패키지를 import 해와서 사용합니다.
+        // regex [문자열] 그 중 무엇이든
+        System.out.println(Arrays.toString(word2.split("[\n ]")));
+        // Ctrl + Space로 필요한 패키지를 import 해와서 사용합니다.
         // Ctrl + D 로 복제
+        System.out.println(word2.replace("여러줄", "다섯줄"));
+        System.out.println(word2.indexOf("하나")); // 방번호
+        System.out.println(word2.charAt(15));
+//        System.out.println(word2.charAt(-1)); // 자바에서는 음수인덱싱이 불가능합니다.
+        System.out.println(word2.contains("하나")); // 특정 값이 있으면 true
+        System.out.println(word2.contains("다섯")); // 없으면 false
+
+        // f'{변수명}이 {변수명} 있다.    .format( ) %d : 정수, %f : 실수, %s : 문자열
+        System.out.println(String.format("나는 어제 30분 유튜브를 봤다"));
+        System.out.println(String.format("나는 어제 %d분 %s를 봤다. %f", 3, "넷플릭스", 4.));
     }
 }
