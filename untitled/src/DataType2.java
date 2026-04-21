@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 public class DataType2 {
     public static void main(String[] args) {
@@ -43,11 +45,32 @@ public class DataType2 {
         list1.add(true);
         list1.add(2);
         System.out.println(list1); // Arrays.toString 없이 사용(출력) 가능
+
         // 2. Generic: 방마다 들어가는 자료형을 고정해서 사용하기 위해 <자료형>으로 이 집합자료형 안의 자료형을 고정
+        // ArrayList<String> list2 = new ArrayList<String>(); // full code
         // ArrayList<String> list2 = new ArrayList(); // 컴파일러가 <>를 추가해줘서 동작은 함
-        ArrayList<String> list2 = new ArrayList<>();
+
+        // 부모 클래스(인터페이스)에 공통 함수, 속성들을 만들어놓고 (설계도)
+        // 자식 클래스에 실제 동작을 적어놓습니다 (구현체)
+        // List(설계도)  = ArrayList(어떤 알고리즘으로 실제로 구현했는지 구현체)
+        List<String> list2 = new ArrayList<>(); // 조회에 더 빠름
         list2.add("가");
         list2.add("나");
 
+        List<String> list3 = new LinkedList<>(); // 삽입, 삭제에 조금 더 빠름
+        list3.add("가");
+        list3.add("나"); // 방 추가
+
+        // 방 삭제 값, 인덱스
+        list3.remove("가");
+        list3.remove(0);
+        System.out.println(list3);
+
+        // 조회 List는 인덱스 번호를 get 명령어로 경유해서 접근합니다.
+        System.out.println(list2.get(0));
+
+        // 수정 : set(방번호, 변경할 값)
+        list2.set(0, "가나다");
+        System.out.println(list2);
     }
 }
