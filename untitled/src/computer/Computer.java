@@ -26,4 +26,12 @@ public abstract class Computer {
 
     abstract void powerOff();
 
+
+    // 메서드의 순서를 정의하는 메서드: 템플릿 메서드라고 부릅니다.
+    void run() {
+        powerOn();
+        openChrome();
+        login();
+        powerOff();
+    }
 }
