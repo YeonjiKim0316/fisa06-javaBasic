@@ -5,6 +5,7 @@ package computer;
 // 구상메서드, 구상변수도 함께 적어줄 수 있습니다.
 // 추상메서드는 abstract 라는 키워드로 구분합니다.
 // 세부내용은 부모클래스를 상속받은 자식클래스에서 구현하기 위한 명세
+// Computer를 상속받아서 "모서리에 전원 있고", "터치로 크롬에 들어갑니다"
 public abstract class Computer {
     String power;
 
@@ -27,8 +28,10 @@ public abstract class Computer {
     abstract void powerOff();
 
 
+    // final : 부모클래스에서 선언한 메서드를 자식클래스에서 재정의(오버라이딩 할 수 없게)
+    // 못 박아두고 사용하기 위해
     // 메서드의 순서를 정의하는 메서드: 템플릿 메서드라고 부릅니다.
-    void run() {
+    final void run() {
         powerOn();
         openChrome();
         login();

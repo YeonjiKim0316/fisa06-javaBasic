@@ -9,5 +9,10 @@ public class Main {
 
         DeskTop pc2 = new DeskTop();
         pc2.run();
+
+        System.out.println("=================");
+
+        Ipad pc3 = new Ipad();
+        pc3.run();
     }
 }
