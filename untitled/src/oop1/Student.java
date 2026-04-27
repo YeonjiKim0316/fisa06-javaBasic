@@ -12,6 +12,19 @@ public class Student {
     String className;
     String name;
 
+    // Overloading(다형성) 자바는 자료형에 따라 다른 방식으로 같은 함수를
+    // 다른 방식으로 사용하도록 구현되어 있습니다.
+
+    // 생성자를 선언하면 자바는 default 생성자를 더이상 컴파일 과정에서 만들지 않습니다.
+    Student(String name) {
+        this.name = name;
+    }
+
+    Student(String name, String className) {
+        this.name = name;
+        this.className = className;
+    }
+
     // 리턴타입 메서드명
     // 리턴이 없을 때는 void(비어있음)으로 해당 자리를 채워넣습니다.
     void enter() {
