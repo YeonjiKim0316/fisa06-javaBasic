@@ -22,9 +22,10 @@ public class Main {
 
         System.out.println("==============================");
         // AIStudent의 인스턴스 변수, 인스턴스 메서드
-        AIStudent lee = new AIStudent();
+        AIStudent lee = new AIStudent("이영희", "AI반", 3);
         lee.enter();
         System.out.println(lee.exit());
+        lee.openChrome();
 
         // AIStudent의 클래스변수, 클래스메서드를 상속받아서 사용합니다.
         System.out.println(AIStudent.totalStudentNo);
