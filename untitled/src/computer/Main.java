@@ -23,5 +23,11 @@ public class Main {
         pc4.powerOn();
         // 은닉성을 사용해서 openChrome, login 이라는 메서드가 있는지도 모르게 됩니다.
         pc4.run();
+
+
+        System.out.println("====컴퓨터 인터페이스에서 가져온 DeskTop=====");
+        computerInterface.DeskTop pc5 = new computerInterface.DeskTop();
+        pc5.run(); // 인터페이스의 default는 public이므로 외부 패키지에서도 메서드 사용 가능
+        // 확실한 것만을 작성하고 기준은 '추상'이므로
     }
 }

@@ -3,9 +3,11 @@ package computerInterface;
 // 추상클래스의 추후에 나온 개념
 // 상속받은 자식클래스에서 실제 동작을 채워넣습니다.
 // 없음이 기준: 있으면 특이(확정된 값)
+//            인터페이스의 default는 public입니다.
 public interface Computer {
     // 변수에는 final 이 선언됩니다.
     // 클래스 변수로만 선언이 가능합니다.
+    // final static String power = "off";
     String power = "off";
 
     // 추상메서드가 기본값이므로
