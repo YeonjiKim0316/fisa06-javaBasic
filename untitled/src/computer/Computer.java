@@ -17,9 +17,13 @@ public abstract class Computer {
     void login() {
         System.out.println("로그인 완료");
     }
+    void openChrome() {
+        System.out.println("크롬을 켭니다");
+    };
+
     // abstract 추상 메서드 <-> 구상메서드
     abstract void powerOn();
-    abstract void openChrome();
+
     abstract void powerOff();
 
 }
