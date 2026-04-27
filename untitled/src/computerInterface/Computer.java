@@ -10,10 +10,10 @@ public interface Computer {
 
     // 추상메서드가 기본값이므로
     // 구상메서드에 default 라는 접근제어자를 붙입니다.
-    default void login() {
+    private void login() {
         System.out.println("로그인 완료");
     }
-    default void openChrome() {
+    private void openChrome() {
         System.out.println("크롬을 켭니다");
     };
 
