@@ -8,12 +8,19 @@ package oop1;
                         // kim.enter();
 public class Student {
 
+    // 클래스 변수(필드) static 키워드로 구분합니다.
+    static int totalStudentNo = 100;
+
     // 인스턴스 변수(필드)
     String className;
     String name;
 
     // Overloading(다형성) 자바는 자료형에 따라 다른 방식으로 같은 함수를
     // 다른 방식으로 사용하도록 구현되어 있습니다.
+
+    // default 생성자 하나는 우리가 생성자를 빼먹으면 자바 컴파일러가 넣어줌
+    Student (){
+    }
 
     // 생성자를 선언하면 자바는 default 생성자를 더이상 컴파일 과정에서 만들지 않습니다.
     Student(String name) {
@@ -27,12 +34,21 @@ public class Student {
 
     // 리턴타입 메서드명
     // 리턴이 없을 때는 void(비어있음)으로 해당 자리를 채워넣습니다.
+    // String으로 time이라는 변수를 받아서
     void enter() {
-        System.out.println(this.name + "이 입실했습니다");
+        System.out.println("9시에 " + this.name + "이 입실했습니다");
+    }
+
+    void enter(String time) {
+        System.out.println(time+"에 " + this.name + "이 입실했습니다");
     }
 
     String exit() {
         return this.name + "이 퇴실했습니다.";
     }
 
+    // static으로 선언
+    static void totalStudentPrint() {
+        System.out.println(totalStudentNo + "명의 수강생이 있습니다.");
+    }
 }
