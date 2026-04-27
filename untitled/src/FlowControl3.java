@@ -5,7 +5,7 @@ public class FlowControl3 {
         // for (초기값; 조건식; 증감문)  { 실행문  }
         // 변수의 유효 범위 : scope  -  { } 로 구분되고
 //        int i = 0;
-            // 1. 스코프 안에서 바깥 변수에는 접근 가능
+            // -1. 스코프 안에서 바깥 변수에는 접근 가능
         for (int i = 1; i <= 10; i++) {
             System.out.println(i);
         }
@@ -15,7 +15,7 @@ public class FlowControl3 {
         for (int i = 2; i <= 10; i += 2) {
             System.out.println(i);
         }
-        // 2. 스코프 바깥에서 안으로는 접근 불가
+        // -2. 스코프 바깥에서 안으로는 접근 불가
 //        System.out.println(i);
 
 
@@ -38,5 +38,7 @@ public class FlowControl3 {
         String[] cheese = { "cheddar", "gouda", "edam", "provolone", "parmesan" };
         // + "먹고 싶다" 를 출력해보세요.
 //        for (int i = 0; )
+
+
     }
 }

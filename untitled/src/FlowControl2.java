@@ -79,6 +79,7 @@ public class FlowControl2 {
             }
         } catch (NumberFormatException error) {
             System.out.println("자료형이 일치하지 않습니다");
+            System.out.println(error.toString());
         } catch (NoSuchElementException error) {
             System.out.println("입력이 중단되었습니다");
         } catch (Exception error) {
