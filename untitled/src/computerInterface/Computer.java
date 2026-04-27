@@ -5,6 +5,7 @@ package computerInterface;
 // 없음이 기준: 있으면 특이(확정된 값)
 public interface Computer {
     // 변수에는 final 이 선언됩니다.
+    // 클래스 변수로만 선언이 가능합니다.
     String power = "off";
 
     // 추상메서드가 기본값이므로
