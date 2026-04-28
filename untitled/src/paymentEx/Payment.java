@@ -32,7 +32,7 @@ public abstract class Payment {
     }
 
     static void getCount() {
-        System.out.println("총 결제 건수는 "+ count + "건 입니다.");
+        System.out.println("총 결제 예정 건수는 "+ count + "건 입니다.");
     }
 
     // 상속받은 자식클래스에서 손대지 못하도록 '확정'

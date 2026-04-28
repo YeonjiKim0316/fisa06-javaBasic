@@ -5,15 +5,20 @@ public class Main {
         // 신용카드와 NaverPay 결제 객체 생성
 //        Payment creditCard = new CreditCardPayment();
         Payment creditCard = new CreditCardPayment(50000);
-
-//        Payment naverPay = new NaverPayPayment(30000);
+//        creditCard.process();
+        Payment naverPay = new NaverPayPayment(30000);
+//        naverPay.processPayment();
 
 //        // 결제 처리 (정적 메서드 사용)
-//        PaymentProcessor.process(creditCard);
-//        PaymentProcessor.process(naverPay);
-//
-//        System.out.println();
-//
+        PaymentProcessor.process(creditCard);
+        PaymentProcessor.process(naverPay);
+
+        Payment.getCount(); // 결제 예정 건수
+        // 실제 결제 성공 건수, 성공 금액은 PaymentProcessor에서 별도의 static 메서드로 관리합니다.
+        PaymentProcessor.getFinalCount();
+
+        System.out.println();
+
 //        // 환불 기능 테스트 (다운캐스팅 사용)
 //        // instanceof 연산자는 객체가 null인 경우 false를 반환합니다.
 //        // instanceof 연산자를 사용하여 타입을 확인한 후, 안전하게 다운캐스팅할 수 있습니다.
