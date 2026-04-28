@@ -19,15 +19,19 @@ public class Main {
 
         System.out.println();
 
-//        // 환불 기능 테스트 (다운캐스팅 사용)
-//        // instanceof 연산자는 객체가 null인 경우 false를 반환합니다.
-//        // instanceof 연산자를 사용하여 타입을 확인한 후, 안전하게 다운캐스팅할 수 있습니다.
-//        if (creditCard instanceof Refundable) {
-//            ((Refundable) creditCard).refund();
-//        }
-//
-//        if (naverPay instanceof Refundable) {
-//            ((Refundable) naverPay).refund();
-//        }
+        // Payment 자료형으로 만든 인스턴스에서는 Refundable 인터페이스에서 물려받은 구상메서드를 사용할 수 없습니다.
+        CreditCardPayment orderCreditPay = new CreditCardPayment(20000);
+        orderCreditPay.refund();
+
+        // 환불 기능 테스트 (다운캐스팅 사용)
+        // instanceof 연산자는 객체가 null인 경우 false를 반환합니다.
+        // instanceof 연산자를 사용하여 타입을 확인한 후, 안전하게 다운캐스팅할 수 있습니다.
+        if (creditCard instanceof Refundable) {
+            ((Refundable) creditCard).refund();
+        }
+
+        if (naverPay instanceof Refundable) {
+            ((Refundable) naverPay).refund();
+        }
     }
 }
