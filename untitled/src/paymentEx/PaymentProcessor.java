@@ -1,6 +1,7 @@
 package paymentEx;
 
-//  결제 처리 (정적 메서드 사용) : 외부에서 이 모듈을 사용한다거나, 결제 자체를 위한 각종 기능들을 묶어서 사용하는 클래스
+//  결제 처리 (정적 메서드 사용) :
+//  외부에서 이 모듈을 사용한다거나, 결제 자체를 위한 각종 기능들을 묶어서 사용하는 클래스
 public class PaymentProcessor {
 
     private static int count; // 실제 결제 완료 건수를 count
@@ -13,6 +14,17 @@ public class PaymentProcessor {
 
     public static void getFinalCount() {
         System.out.println("총 결제 완료 건수는 "+ count + "건 입니다.");
+    }
+
+    public static void refund(Payment payment) {
+
+        // 환불 기능 테스트 (다운캐스팅 사용)
+        // instanceof 연산자는 객체가 null인 경우 false를 반환합니다.
+        // instanceof 연산자를 사용하여 타입을 확인한 후, 안전하게 다운캐스팅할 수 있습니다.
+        if (payment instanceof Refundable) {
+            ((Refundable) payment).refund();
+        }
+        count--;
     }
 
 }
