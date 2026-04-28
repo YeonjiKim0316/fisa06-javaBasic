@@ -23,6 +23,7 @@ public abstract class Payment {
         this.amount = payAmount;
         count++;
     }
+
     abstract void processPayment();
 
     void displayAmount() {
