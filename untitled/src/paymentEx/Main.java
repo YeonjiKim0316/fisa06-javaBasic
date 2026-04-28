@@ -3,8 +3,9 @@ package paymentEx;
 public class Main {
     public static void main(String[] args) {
         // 신용카드와 NaverPay 결제 객체 생성
+//        Payment creditCard = new CreditCardPayment();
         Payment creditCard = new CreditCardPayment(50000);
-        Payment naverPay = new NaverPayPayment(30000);
+//        Payment naverPay = new NaverPayPayment(30000);
 
 //        // 결제 처리 (정적 메서드 사용)
 //        PaymentProcessor.process(creditCard);
