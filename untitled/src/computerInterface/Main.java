@@ -1,6 +1,7 @@
 package computerInterface;
 
 import computer.LapTop;
+import oop2.MyDefault;
 import oop2.MyMyPublic;
 import oop2.MyProtected;
 import oop2.MyPublic;
@@ -46,7 +47,15 @@ public class Main {
 
         System.out.println("====== protected 접근 제어자를 상속받은 MyMyPublic =====");
         MyMyPublic mp4 = new MyMyPublic(); // class가 public이라 객체 생성 가능
-        mp4.print(); // msg는 protected 변수지만 print()는 public 메서드이기 때문에 외부에서 출력 가능
+//        mp4.print(); // msg는 protected 변수지만 print()가 public 메서드이면
+                    // 외부에서 출력 가능
+
+        System.out.println("====== default 클래스 =========");
+        MyDefault mp5 = new MyDefault(); // class가 default 이므로 객체 생성 불가
+        mp4.print();
+//        System.out.println(mp4.msg);
+
+
 
     }
 }

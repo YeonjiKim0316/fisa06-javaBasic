@@ -17,10 +17,11 @@ public class Main {
         System.out.println(MyPublic.hello); // 클래스 변수
         MyPublic.pprint(); // 클래스 메서드
 
-        System.out.println("========== MyProtected을 상속한 자식클래스: MyMyPublic =======");
+        System.out.println("========== MyDefalut을 상속한 자식클래스: MyMyPublic =======");
         MyMyPublic mp2 = new MyMyPublic();
         mp2.print(); // 인스턴스 메서드
         System.out.println(mp2.msg); // 인스턴스 변수
+        mp2.dprint(); // 인스턴스 메서드
 //        System.out.println(MyMyPublic.hello); // 클래스 변수
 //        MyMyPublic.pprint(); // 클래스 메서드
 
@@ -28,6 +29,16 @@ public class Main {
         MyProtected mp3 = new MyProtected();
         mp3.print(); // 같은 패키지 안이라서 ok
         System.out.println(mp3.msg);
+
+        System.out.println("====== default 클래스 =========");
+        MyDefault mp4 = new MyDefault();
+        mp4.print();
+        System.out.println(mp4.msg);
+
+        System.out.println("====== 프라이빗 멤버가 있는 클래스 =========");
+        MyPrivate mp5 = new MyPrivate(); // class는 public이므로 ok
+        mp5.print(); // this.msg (프라이빗 변수를 조회)
+
 
     }
 }
