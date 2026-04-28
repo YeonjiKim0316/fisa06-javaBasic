@@ -92,6 +92,9 @@ public class Main {
 전체 결제 건수: 2건
 ```
 
+1. 환불할 때 실제로 PaymentProcessor의 count가 하나 빠지도록 메서드를 구현해서 추가해보세요.
+2. CreditCardPayment의 refund() 메서드를 NaverPayPayment와 같은 방식으로 동작하도록 변경해보세요.
+
 ### **업캐스팅과 다운캐스팅**
 
 | **특징** | **업캐스팅(Upcasting)** | **다운캐스팅(Downcasting)** |
