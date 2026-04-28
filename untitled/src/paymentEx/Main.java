@@ -36,5 +36,6 @@ public class Main {
 //            ((Refundable) naverPay).refund();
 //        }
         PaymentProcessor.refund(creditCard);
+        PaymentProcessor.getFinalCount();
     }
 }
