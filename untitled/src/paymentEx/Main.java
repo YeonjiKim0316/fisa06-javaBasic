@@ -5,8 +5,7 @@ public class Main {
         // 신용카드와 NaverPay 결제 객체 생성
 //        Payment creditCard = new CreditCardPayment();
         Payment creditCard = new CreditCardPayment(50000);
-//        creditCard.displayAmount(); // 결제과정 자체는 같습니다 -> 순서대로 명령어를 실행하는 tempate method로 묶어서 사용하면 재사용성을 늘릴 수 있겠네요,
-//        creditCard.processPayment(); //
+
 //        Payment naverPay = new NaverPayPayment(30000);
 
 //        // 결제 처리 (정적 메서드 사용)

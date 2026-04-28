@@ -26,12 +26,18 @@ public abstract class Payment {
 
     abstract void processPayment();
 
-    void displayAmount() {
-        System.out.println("결제 금액은 "+ this.amount + "입니다. ");
+    // private 변수에 직접 접근할 수 없도록 조회만 가능케 하는 getter
+    double displayAmount() {
+        return this.amount;
     }
 
     static void getCount() {
         System.out.println("총 결제 건수는 "+ count + "건 입니다.");
     }
 
+    // 상속받은 자식클래스에서 손대지 못하도록 '확정'
+    final void process() {
+           displayAmount(); // 무엇으로 결제하든 결제과정 자체는 같습니다 -> 순서대로 명령어를 실행하는 tempate method로 묶어서 사용하면 재사용성을 늘릴 수 있겠네요,
+           processPayment(); //
+    }
 }

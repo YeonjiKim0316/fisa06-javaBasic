@@ -10,11 +10,12 @@ public class CreditCardPayment extends Payment implements Refundable{
 
     @Override
     void processPayment() {
-        displayAmount();
+        System.out.println("결제 금액은 " + displayAmount() + "원 입니다");
     }
 
     @Override
     public void refund() {
         System.out.println("amount가 부모클래스에서 private 변수이기 때문에 접근이 불가");
     }
+
 }
