@@ -1,4 +1,4 @@
 package oop2;
 
-public class MyMyPublic extends MyPublic {
+public class MyMyPublic extends MyProtected {
 }

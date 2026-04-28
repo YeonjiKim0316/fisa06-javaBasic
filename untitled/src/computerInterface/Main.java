@@ -1,6 +1,8 @@
 package computerInterface;
 
 import computer.LapTop;
+import oop2.MyMyPublic;
+import oop2.MyProtected;
 import oop2.MyPublic;
 
 /*
@@ -36,5 +38,15 @@ public class Main {
         System.out.println(mp1.msg); // 인스턴스 변수
         System.out.println(MyPublic.hello); // 클래스 변수
         MyPublic.pprint(); // 클래스 메서드
+
+        System.out.println("====== protected 접근 제어자 =====");
+        MyProtected mp3 = new MyProtected(); // public class가 객체 생성 가능
+//        mp3.print(); // 다른 패키지 안이라서 접근 불가
+//        System.out.println(mp3.msg); // 다른 패키지 안이라서 접근 불가
+
+        System.out.println("====== protected 접근 제어자를 상속받은 MyMyPublic =====");
+        MyMyPublic mp4 = new MyMyPublic(); // class가 public이라 객체 생성 가능
+        mp4.print(); // msg는 protected 변수지만 print()는 public 메서드이기 때문에 외부에서 출력 가능
+
     }
 }
