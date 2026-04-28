@@ -1,6 +1,7 @@
 package computerInterface;
 
 import computer.LapTop;
+import oop2.MyPublic;
 
 /*
 class의 경우
@@ -30,5 +31,10 @@ public class Main {
 //        pc2.run();
 
 
+        MyPublic mp1 = new MyPublic();
+        mp1.print(); // 인스턴스 메서드
+        System.out.println(mp1.msg); // 인스턴스 변수
+        System.out.println(MyPublic.hello); // 클래스 변수
+        MyPublic.pprint(); // 클래스 메서드
     }
 }
