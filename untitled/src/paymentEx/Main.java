@@ -1,5 +1,8 @@
 package paymentEx;
 
+// 코드를 덜 고치면서 앞으로 이 서비스를 개선해나갈 수 있는 방법으로
+// 1. main 함수는 되도록 손대지 않는다.
+// 2. 객체를 새로 만들거나 클래스 변수 같은 것들에 대한 접근을 최소화한다
 public class Main {
     public static void main(String[] args) {
         // 신용카드와 NaverPay 결제 객체 생성
